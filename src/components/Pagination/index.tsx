@@ -13,6 +13,7 @@ const BasePagination = ({ totalData }: BasePaginationProps) => {
   const page = parseInt(params.get('page') || '1');
 
   const onPageChange = (event: React.ChangeEvent<unknown>, newPage: number) => {
+    if(newPage === page) return;
     disable();
     const newParams = new URLSearchParams(params);
     newParams.set('page', newPage.toString());

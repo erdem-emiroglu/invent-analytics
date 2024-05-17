@@ -4,6 +4,7 @@ export type Column<T> = {
   key: keyof T;
   label: string;
   render?: RenderType<T>;
+  width?: number | string;
 };
 
 export type BaseTableProps<T> = {

@@ -14,10 +14,10 @@ const ContentTable = async () => {
   const { Search: data, totalResults } = await fetchContent(params);
 
   const columns = [
-    { key: 'Title', label: 'Title', render: (item) => <Link href={`/details/${item.imdbID}`}>{item.Title}</Link> },
-    { key: 'Year', label: 'Year' },
-    { key: 'Type', label: 'Type' },
-    { key: 'imdbID', label: 'IMDB ID' },
+    { key: 'Title', label: 'Title', width: "50%", render: (item) => <Link href={`/details/${item.imdbID}`}>{item.Title}</Link> },
+    { key: 'Year', label: 'Year', width: "20%" },
+    { key: 'Type', label: 'Type', width: "15%" },
+    { key: 'imdbID', label: 'IMDB ID', width: "15%" },
   ] satisfies Column<SearchItem>[];
 
   return (

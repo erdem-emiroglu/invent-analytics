@@ -24,7 +24,7 @@ import styles from './BaseTable.module.scss';
  **/
 const BaseTable = <T,>({ columns, data, totalData, children }: BaseTableProps<T>) => {
   return (
-    <Container>
+    <Container className={styles.tableContainer}>
       <Stack className={styles.actions}>{children}</Stack>
       {data ? (
         <TableContainer>
@@ -32,7 +32,7 @@ const BaseTable = <T,>({ columns, data, totalData, children }: BaseTableProps<T>
             <TableHead>
               <TableRow>
                 {columns.map((column, index) => (
-                  <TableCell key={index} className={styles.tableHeader}>
+                  <TableCell width={column.width} key={index} className={styles.tableHeader}>
                     {column.label}
                   </TableCell>
                 ))}
@@ -42,7 +42,7 @@ const BaseTable = <T,>({ columns, data, totalData, children }: BaseTableProps<T>
               {data.map((row, index) => (
                 <TableRow key={index}>
                   {columns.map((column) => (
-                    <TableCell key={column.label} component="th" scope="row">
+                    <TableCell width={column.width} key={column.label} component="th" scope="row">
                       {column.render ? column.render(row) : (row[column.key] as React.ReactNode)}
                     </TableCell>
                   ))}
