@@ -1,0 +1,21 @@
+.tableHeader {
+  font-weight: bolder;
+}
+
+.actions {
+  flex-direction: row !important;
+  padding: 1em;
+  gap: 1em;
+  justify-content: end;
+
+  @media (max-width: map-get($breakpoints, 'sm')) {
+    flex-direction: column !important;
+  }
+}
+
+.paginationContainer {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+}

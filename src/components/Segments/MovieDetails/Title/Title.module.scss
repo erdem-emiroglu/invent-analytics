@@ -1,0 +1,14 @@
+.titleContainer {
+  display: flex !important;
+  flex-direction: column;
+  gap: 1em;
+
+  .title {
+    font-size: 2em !important;
+    font-weight: 700 !important;
+  }
+
+  .divider {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+  }
+}

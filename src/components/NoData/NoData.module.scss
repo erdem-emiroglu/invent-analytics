@@ -1,0 +1,14 @@
+.noData {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 0;
+  text-align: center;
+
+  .noDataText {
+    font-size: 2em;
+    font-weight: bolder;
+    color: #5c647a;
+  }
+}

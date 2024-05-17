@@ -1,0 +1,33 @@
+.movieCardContainer {
+  background: transparent !important;
+  color: white !important;
+
+  .contentContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+
+    @media (max-width: map-get($breakpoints, 'md')) {
+      flex-direction: column;
+      gap: 4em;
+    }
+  }
+
+  .tagsContainer {
+    gap: 1em;
+    justify-content: space-between;
+
+    @media (max-width: map-get($breakpoints, 'md')) {
+      gap: 2em;
+    }
+  }
+
+  .generalInfoContainer {
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @media (max-width: map-get($breakpoints, 'md')) {
+      align-items: flex-start;
+    }
+  }
+}

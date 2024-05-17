@@ -1,0 +1,14 @@
+.ratingCardContainer {
+  background: transparent !important;
+  color: white !important;
+
+  .cardContent {
+    gap: 1em;
+    align-items: center;
+  }
+
+  .ratingTitle {
+    font-weight: bolder;
+    font-size: 1em;
+  }
+}

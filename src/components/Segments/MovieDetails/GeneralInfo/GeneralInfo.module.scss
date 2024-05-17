@@ -1,0 +1,19 @@
+.container {
+  gap: 0.3em;
+
+  .infoTextContainer {
+    display: grid !important;
+    gap: 0.5em;
+    grid-template-columns: 1fr 2fr;
+
+    .infoTextLabel {
+      font-weight: bold;
+      color: map-get($colors, 'light-orange');
+    }
+
+    .infoText,
+    .infoTextLabel {
+      font-size: small;
+    }
+  }
+}

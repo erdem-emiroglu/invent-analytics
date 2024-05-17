@@ -1,0 +1,28 @@
+.gradientContainer {
+  background: map-get($colors, 'gradient-start'); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(
+    to right,
+    map-get($colors, 'gradient-start'),
+    map-get($colors, 'gradient-middle'),
+    map-get($colors, 'gradient-end')
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    map-get($colors, 'gradient-start'),
+    map-get($colors, 'gradient-middle'),
+    map-get($colors, 'gradient-end')
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  justify-content: center;
+  flex: 1 1 auto;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  @media (max-width: map-get($breakpoints, 'md')) {
+    padding: 1em 0;
+  }
+}

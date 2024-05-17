@@ -1,0 +1,7 @@
+.page {
+  padding-top: 2em;
+
+  @media (max-width: map-get($breakpoints, 'sm')) {
+    padding: 2em 0;
+  }
+}
